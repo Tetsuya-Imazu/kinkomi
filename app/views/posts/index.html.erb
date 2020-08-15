@@ -4,15 +4,9 @@
       <div class="more">
         <span>...</span>
         <ul class="more_list hidden" id="pull-down">
-          <li>
-            <%= link_to '詳細', "/posts/#{post.id}", method: :get %>
-          </li>
-          <li>
-            <%= link_to '編集', edit_post_path(post.id), method: :get %>
-          </li>
-          <li>
-            <%= link_to '削除', post_path(post.id), method: :delete %>
-          </li>
+          <li><%= link_to '詳細', post_path(post.id), method: :get %></li>
+          <li><%= link_to '編集', edit_post_path(post.id), method: :get %></li>
+          <li><%= link_to '削除', post_path(post.id), method: :delete %></li>
         </ul>
       </div>
       <div class="post-content">
