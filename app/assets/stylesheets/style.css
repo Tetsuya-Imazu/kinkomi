@@ -76,14 +76,22 @@ header{
 .post{
   background-color: #fff;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
-  width: 500px;
-  height: 300px;
+  width: 600px;
+  height: 400px;
   padding: 20px;
   margin: 20px auto;
+  position: relative;
 }
-.more span{
+.post-content{
+  width: 500px;
+}
+.more{
   font-weight: bold;
-  
+  position: absolute;
+  right: 20px;
+}
+.hidden{
+  display: none;
 }
 .post-create{
   background-color: lightgray;

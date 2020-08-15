@@ -1,16 +1,22 @@
 <div class="post-space">
   <% @posts.each do |post| %>
-    <div class="post">
+    <div class="post" id="lists">
       <div class="more">
         <span>...</span>
-        <ul class="more_list">
+        <ul class="more_list hidden" id="pull-down">
+          <li>
+            <%= link_to '詳細', "/posts/#{post.id}", method: :get %>
+          </li>
+          <li>
+            <%= link_to '編集', "/posts/#{post.id}", method: :get %>
+          </li>
           <li>
             <%= link_to '削除', "/posts/#{post.id}", method: :delete %>
           </li>
         </ul>
       </div>
       <div class="post-content">
-        <p>nickname: </p>
+        <p>nickname: <%#= user.nickname %></p>
         <p>トレーニング名: <%= post.name %></p>
         <p>説明: <%= post.description %></p>
         <%#ここに動画が入る？%>
