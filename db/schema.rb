@@ -13,9 +13,8 @@
 ActiveRecord::Schema.define(version: 2020_08_13_105510) do
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.text "content", null: false
-    t.text "image"
-    t.text "video"
+    t.text "name", null: false
+    t.text "description", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
