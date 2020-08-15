@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Kinkomi</title>
+    <title>KinKomi!!</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+    <div class="wrapper">
+      <header>
+        <div class="app-logo">
+          <%= link_to '筋コミ!!', '/' %>
+        </div>
+        <div class="post-btn">
+          <%= link_to '投稿する', '/posts/new', class: 'post' %>
+        </div>
+      </header>
+      <%= yield %>
+      <footer>
+        <p>KinKomi 2020</p>
+      </footer>
+    </div>
   </body>
 </html>
