@@ -1,0 +1,11 @@
+<div class="post-space">
+  <div class="post-create">
+    <%= form_with(model: @post, local: true) do |form| %>
+      <h2>編集する</h2>
+      <%= form.text_field :name, placeholder:"トレーニング名" %>
+      <%= form.text_area :description, placeholder:"説明" %>
+      <%= form.text_field :video, placeholder:"動画" %>
+      <%= form.submit "編集" %>
+    <% end %>
+  </div>
+</div>
