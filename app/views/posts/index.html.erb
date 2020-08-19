@@ -1,20 +1,26 @@
+<div class="center-header">新着投稿</div>
 <div class="post-space">
   <% @posts.each do |post| %>
-    <div class="post" id="lists">
-      <div class="more">
-        <span>...</span>
-        <ul class="more_list hidden" id="pull-down">
-          <li><%= link_to '詳細', post_path(post.id), method: :get %></li>
+    <%
+=begin%>
+ <div class="more" id="lists">
+      <span>...</span>
+      <ul class="more_list hidden" id="pull-down">
+        <li><%= link_to '詳細', post_path(post.id), method: :get %></li>
+        <% if user_signed_in? && current_user.id == post.user_id %>
           <li><%= link_to '編集', edit_post_path(post.id), method: :get %></li>
           <li><%= link_to '削除', post_path(post.id), method: :delete %></li>
-        </ul>
-      </div>
-      <div class="post-content">
-        <p>nickname: <%#= user.nickname %></p>
-        <p>トレーニング名: <%= post.name %></p>
-        <p>説明: <%= post.description %></p>
-        <%#ここに動画が入る？%>
-      </div>
+        <% end %>
+      </ul>
+    </div> 
+<%
+=end%>
+    <div class="posts">
+      <p><%= post.user.nickname %></p>
+      <p>トレーニング名: <%= post.name %></p>
+      <p>説明: <%= post.description %></p>
+      <%#ここに動画が入る？%>
+      <%= link_to '', post_path(post.id), method: :get %>
     </div>
   <% end %>
 </div>

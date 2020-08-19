@@ -1,17 +1,22 @@
+<div class="center-header">
+  <a href="/users/<%= @post.user.id %>">
+    <p><%= @post.user.nickname %>さん</p>
+  </a>
+</div>
 <div class="post-space">
-  <div class="post" id="lists">
-    <div class="more">
-      <span>...</span>
-      <ul class="more_list hidden" id="pull-down">
-        <li><%= link_to '編集', edit_post_path(@post.id), method: :get %></li>
-        <li><%= link_to '削除', post_path(@post.id), method: :delete %></li>
-      </ul>
-    </div>
-    <div class="post-content">
-      <p>nickname: <%#= @user.nickname %></p>
-      <p>トレーニング名: <%= @post.name %></p>
-      <p>説明: <%= @post.description %></p>
-      <%#ここに動画が入る？%>
-    </div>
+  <div class="posts">
+    <p>トレーニング名: <%= @post.name %></p>
+    <p>説明: <%= @post.description %></p>
+    <%#ここに動画が入る？%>
   </div>
+  <% if user_signed_in? && current_user.id == @post.user_id %>
+    <div class="more">
+      <div class="edit-btn">
+        <%= link_to '編集', edit_post_path(@post.id), method: :get %>
+      </div>
+      <div class="delete-btn">
+        <%= link_to '削除', post_path(@post.id), method: :delete %>
+      </div>
+    </div>
+  <% end %>
 </div>

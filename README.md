@@ -13,8 +13,8 @@
 
 ### Association
 
-- has_many :posts, through: :favorite
-- has_many :favorites
+- has_many :posts, through: :like
+- has_many :likes
 - has_many :comments
 
 ## postsテーブル
@@ -28,8 +28,8 @@
 ### Association
 
 - has_many :comments
-- has_many :favorites
-- has_many :users, through: :favorite
+- has_many :likes
+- has_many :users, through: :like
 
 ## commentsテーブル
 
@@ -44,7 +44,7 @@
 - belongs_to :post
 - belongs_to :user
 
-## favoriteテーブル
+## likeテーブル
 
 | Column  | Type | Options     |
 | ------- | ---- | ----------- |
