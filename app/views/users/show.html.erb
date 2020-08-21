@@ -1,25 +1,14 @@
 <div class="center-header"><%= @nickname %>さんの投稿一覧</div>
 <div class="post-space">
   <% @posts.each do |post| %>
-    <%
-=begin%>
- <div class="post" id="lists">
-      <div class="more">
-        <span>...</span>
-        <ul class="more_list hidden" id="pull-down">
-          <li><%= link_to '詳細', post_path(post.id), method: :get %></li>
-          <% if user_signed_in? && current_user.id == post.user_id %>
-            <li><%= link_to '編集', edit_post_path(post.id), method: :get %></li>
-            <li><%= link_to '削除', post_path(post.id), method: :delete %></li>
-          <% end %>
-        </ul>
-      </div> 
-<%
-=end%>
     <div class="posts">
       <p>トレーニング名: <%= post.name %></p>
       <p>説明: <%= post.description %></p>
-      <%#ここに動画が入る？%>
+      <div class="video-space">
+        <p>
+          <%= video_tag post.video.to_s, loop: true, controls: true, :playsinline => 'true', class: "video embed-responsive-post" %>
+        </p>
+      </div>
       <%= link_to '', post_path(post.id), method: :get %>
     </div>
   <% end %>

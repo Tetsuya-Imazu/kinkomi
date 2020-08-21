@@ -7,7 +7,14 @@
   <div class="posts">
     <p>トレーニング名: <%= @post.name %></p>
     <p>説明: <%= @post.description %></p>
-    <%#ここに動画が入る？%>
+    <div class="video-space">
+      <p>
+        <%#= link_to @post.video_url.to_s do %>
+          <%#= video_tag(@post.video.thumb.to_s) %>
+          <%= video_tag @post.video.to_s, loop: true, controls: true, :playsinline => 'true', class: "video embed-responsive-post" %>
+        <%# end %>
+      </p>
+    </div>
   </div>
   <% if user_signed_in? && current_user.id == @post.user_id %>
     <div class="more">
