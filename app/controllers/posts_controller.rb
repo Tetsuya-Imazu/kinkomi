@@ -12,8 +12,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(post_params)
-    redirect_to root_path
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def destroy
@@ -37,7 +41,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:name, :description, :video).merge(user_id: current_user.id)
+    params.require(:post).permit(:name, :description, :category_id, :video).merge(user_id: current_user.id)
   end
 
   def set_post
