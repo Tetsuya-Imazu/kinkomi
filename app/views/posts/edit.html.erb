@@ -1,12 +1,31 @@
-<div class="center-header">編集する</div>
-<div class="post-create">
-  <%= form_with(model: @post, local: true) do |form| %>
-    <p><%= form.text_field :name, placeholder:"トレーニング名" %></p>
-    <p><%= form.text_area :description, placeholder:"説明" %></p>
-    <p>
-      <%= form.label :video %>
-      <%= form.file_field :video, :accept => 'video/*' %>
-    </p>
-    <p><%= form.submit "編集" %></p>
-  <% end %>
+<div class="center-contents">
+  <div class="center-header">編集する</div>
+  <div class="post-create">
+    <%= form_with(model: @post, local: true) do |form| %>
+      <p><%= form.text_field :name, placeholder:"トレーニング名" %></p>
+      <p><%= form.text_area :description, placeholder:"説明" %></p>
+      <p>
+        <%= form.label :video %>
+        <%= form.file_field :video, :accept => 'video/*' %>
+      </p>
+      <p><%= form.submit "編集" %></p>
+    <% end %>
+  </div>
+</div>
+<div class="right-bar">
+  <div class="right-header">
+    <h2>Q&A</h2>
+  </div>
+  <div class="messages">
+    <div class="message">
+      <div class="message-user">nickname</div>
+      <div class="message-content">aaaaaa</div>
+    </div>
+  </div>
+  <div class="form">
+    <div class="form-input">
+      <input class="form-message" placeholder= "メッセージ">
+    </div>
+    <input class="form-submit" type="submit" value="送信">
+  </div>
 </div>
