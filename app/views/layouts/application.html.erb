@@ -42,42 +42,12 @@
           <p><a href="#">#胸の日</a></p>
           <p><a href="#">#背中の日</a></p>
           <p><a href="#">#肩の日</a></p>
-          <p><a href="#">#胸の日</a></p>
+          <p><a href="#">#腕の日</a></p>
           <p><a href="#">#脚の日</a></p>
           <p><a href="#">#腹筋の日</a></p>
-          <p><a href="#">#食事メニュー</a></p>
         </div>
       </div>
-      <div class="center-contents">
-
-        <%= yield %>
-        
-      </div>
-      <div class="right-bar">
-        <div class="right-header">
-          <h2>Q&A</h2>
-        </div>
-        <div class="messages">
-          <div class="message">
-            <div class="message-user">nickname</div>
-            <div class="message-content">aaaaaa</div>
-          </div>
-        </div>
-        <% if user_signed_in? %>
-          <div class="form">
-            <div class="form-input">
-              <input class="form-message" placeholder= "メッセージ">
-            </div>
-            <input class="form-submit" type="submit" value="送信">
-          </div>
-        <% else %>
-          <div class="form">
-            <div class="form-input">
-              <input class="form-message" placeholder= "ログイン/サインアップ">
-            </div>
-          </div>
-        <% end %>
-      </div>
+      <%= yield %>
     </div>
   </body>
 </html>
