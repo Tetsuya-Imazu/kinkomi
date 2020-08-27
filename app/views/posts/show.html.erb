@@ -8,6 +8,7 @@
     <div class="posts">
       <p>トレーニング名: <%= @post.name %></p>
       <p>説明: <%= @post.description %></p>
+      <p>カテゴリー: <%= @post.category.name %></p>
       <div class="like-btn">
         <% if current_user.already_liked?(@post) %>
           <%= button_to 'いいねを取り消す', post_like_path(@post), method: :delete %>

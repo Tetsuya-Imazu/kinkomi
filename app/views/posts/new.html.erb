@@ -4,6 +4,7 @@
     <%= form_with(model: @post, local: true) do |form| %>
       <p><%= form.text_field :name, placeholder:"トレーニング名" %></p>
       <p><%= form.text_area :description, placeholder:"説明" %></p>
+      <p><%= form.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %></p>
       <p>
         <%= form.label :video %>
         <%= form.file_field :video, :accept => 'video/*' %>
