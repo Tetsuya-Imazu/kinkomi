@@ -17,18 +17,17 @@
 </div>
 <div class="right-bar">
   <div class="right-header">
-    <h2>Q&A</h2>
+    <h2>いいね!した投稿</h2>
   </div>
   <div class="messages">
     <div class="message">
-      <div class="message-user">nickname</div>
-      <div class="message-content">aaaaaa</div>
+      <% @user.liked_posts.each do |post| %>
+        <%= post.user.nickname %>
+        <%= post.name %>
+      <% end %>
+      
     </div>
   </div>
   <div class="form">
-    <div class="form-input">
-      <input class="form-message" placeholder= "メッセージ">
-    </div>
-    <input class="form-submit" type="submit" value="送信">
   </div>
 </div>
