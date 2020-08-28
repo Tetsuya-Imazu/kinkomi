@@ -1,41 +1,52 @@
-<div class="center-contents">
+<div class="center-contents-show">
   <div class="center-header">
     <a href="/users/<%= @post.user.id %>">
-      <p><%= @post.user.nickname %>さん</p>
+      <p><%= @post.user.nickname %>さんの<%= @post.name %></p>
     </a>
   </div>
-  <div class="post-space">
-    <div class="posts">
-      <p>トレーニング名: <%= @post.name %></p>
-      <p>説明: <%= @post.description %></p>
-      <p>カテゴリー: <%= @post.category.name %></p>
-      <div class="like-btn">
-        <% if current_user.already_liked?(@post) %>
-          <%= button_to 'いいねを取り消す', post_like_path(@post), method: :delete %>
-        <% else %>
-          <%= button_to 'いいね!', post_likes_path(@post) %>
-        <% end %>
-      </div>
+  <div class="post-space-show">
+    <div class="posts-show">
       <div class="video-space">
         <p>
           <%= video_tag @post.video.to_s, loop: true, controls: true, :playsinline => 'true', class: "video embed-responsive-post" %>
         </p>
       </div>
+      <div class="weight-bold-text">
+        トレーニング名:
+      </div>
+      <%= @post.name %>
+      <div class="weight-bold-text">
+        説明:
+      </div>
+      <%= @post.description %>
+      <div class="weight-bold-text">
+        カテゴリー:
+      </div>
+      <%= @post.category.name %>
+      <div class="like-btn">
+        <% if current_user.already_liked?(@post) %>
+          <%= button_to 'いいね!を取り消す', post_like_path(@post), method: :delete %>
+        <% else %>
+          <%= button_to 'いいね!', post_likes_path(@post) %>
+        <% end %>
+      </div>
     </div>
     <% if user_signed_in? && current_user.id == @post.user_id %>
-      <div class="more">
-        <div class="edit-btn">
-          <%= link_to '編集', edit_post_path(@post.id), method: :get %>
-        </div>
-        <div class="delete-btn">
-          <%= link_to '削除', post_path(@post.id), method: :delete %>
-        </div>
+      <div class="more-show">
+          <%= link_to '編集', edit_post_path(@post.id), class:"edit-btn", method: :get %>
+          <%= link_to '削除', post_path(@post.id), class:"delete-btn", method: :delete %>
       </div>
     <% end %>
-    <h2>いいね!したユーザー</h2>
-    <% @post.liked_users.each do |user| %>
-      <li><%= user.nickname %></li>
-    <% end %>
+    <div class="like-space">
+      <div class="weight-bold-text">
+        いいね!したユーザー
+      </div>
+      <% @post.liked_users.each do |user| %>
+        <div class="like-user">
+          <li><%= user.nickname %></li>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
 <div class="right-bar">
@@ -67,3 +78,4 @@
       </div>
     <% end %>
 </div>
+

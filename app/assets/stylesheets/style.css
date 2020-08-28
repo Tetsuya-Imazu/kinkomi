@@ -121,88 +121,27 @@
 .post-create p{
   margin-top: 30px;
 }
-.posts{
-  width: 100%;
-  height: 540px;
-  padding: 20px;
-  border-bottom: 1px solid #212222;
-  position: relative;
-}
-.posts a{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height:100%;
-  width: 100%;
-}
+
 .like-btn{
   margin: 10px 0;
 }
-.video-space p{
+/* .video-space p{
   width: 650px;
   height: 380px;
-}
+} */
 .video{
   width: 650px;
   height: 380px;
+  margin: 0 auto;
 }
-.right-bar{
-  background-color: #122c49;
-  width: 350px;
-  height: 100vh;
-  border-left: 1px solid #212222;
-}
-.right-header{
-  background-color:  #122c49;
-  height: 80px;
-  padding: 20px;
-}
-.right-header h2{
-  font-size: 28px;
-  color: #fff;
-  text-align: center;
-}
-.messages{
-  background-color: #fff;
-  height: calc(100% - 160px);
-  padding: 15px;
-  overflow-y: scroll;
-  overflow: hidden visible;
-}
-.message{
-  margin: 10px 0;
-}
-.form{
-  height: 80px;
-  padding: 12px;
-  display: flex;
-  box-sizing: border-box;
-}
-.form-input{
-  width: 100%;
-}
-.form-message input{
-  border: none;
-  height: 50px;
-  width: 100%;
-  padding-left: 10px;
-}
-.form-submit input{
-  background-color: #fff;
-  border: none;
-  color: black;
-  font-size: 16px;
-  height: 50px;
-  margin-left: 15px;
-  padding: 0 20px;
-}
+
 .hidden{
   display: none;
 }
-.field{
+/* .field{
   margin-top: 30px;
   text-align: center;
-}
+} */
 .actions{
   margin-top: 30px;
   text-align: center;
@@ -216,9 +155,3 @@
   margin: 14px 0;
   font-size: 22px;
 }
-/* .comment-form{
-
-}
-.comment-submit{
- 
-} */

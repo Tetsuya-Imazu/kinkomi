@@ -1,0 +1,107 @@
+.center-contents-show{
+  background-color: #fff;
+  width: calc(100% - 650px);
+  height: 100vh;
+  overflow-y: scroll;
+  overflow: hidden visible;
+}
+.post-space-show{
+  
+}
+.posts-show{
+  width: 100%;
+  /* height: 540px; */
+  padding: 50px;
+  /* border-bottom: 1px solid #212222; */
+  position: relative;
+}
+.posts-show p{
+  margin-top: 10px;
+}
+
+.more-show{
+  border-top: 1px solid #212222;
+  display: flex;
+  justify-content: space-around;
+}
+
+.edit-btn{
+  border-radius: 40px;
+  width: 15vw;
+  min-width: 200px;
+  color: #212222;
+  border: 2px solid #ffb340;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+.delete-btn{
+  border-radius: 40px;
+  width: 15vw;
+  min-width: 200px;
+  color: #212222;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.like-space{
+  padding: 0 50px;
+}
+.like-user{
+  margin: 5px 0 10px 0;
+}
+
+.right-bar{
+  background-color: #122c49;
+  width: 350px;
+  height: 100vh;
+  border-left: 1px solid #212222;
+}
+.right-header{
+  background-color:  #122c49;
+  height: 80px;
+  padding: 20px;
+}
+.right-header h2{
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
+}
+.messages{
+  background-color: #eee;
+  height: calc(100% - 160px);
+  padding: 15px;
+  overflow-y: scroll;
+  overflow: hidden visible;
+}
+.message p{
+  margin: 10px 0;
+}
+.form{
+  height: 80px;
+  padding: 12px;
+  display: flex;
+  box-sizing: border-box;
+}
+.form-input{
+  width: 100%;
+}
+.form-message input{
+  border: none;
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+}
+.form-submit input{
+  background-color: #fff;
+  border: none;
+  color: black;
+  font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 20px;
+}
