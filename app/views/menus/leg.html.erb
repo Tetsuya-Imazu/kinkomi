@@ -1,0 +1,18 @@
+<div class="center-contents">
+  <div class="center-header">脚の日の投稿</div>
+  <div class="post-space">
+    <% @posts.each do |post| %>
+      <div class="posts">
+        <p><%= post.user.nickname %></p>
+        <p>トレーニング名: <%= post.name %></p>
+        <p>説明: <%= post.description %></p>
+        <%= link_to '', post_path(post.id), method: :get %>
+        <div class="video-space">
+          <p>
+            <%= video_tag post.video.to_s, loop: true, controls: true, :playsinline => 'true', class: "video embed-responsive-post" %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
