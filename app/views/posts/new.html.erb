@@ -1,34 +1,32 @@
-<div class="center-contents">
-  <div class="center-header">投稿する</div>
+<div class="center-contents-new">
+  <div class="center-header-new">投稿する</div>
   <div class="post-create">
     <%= form_with(model: @post, local: true) do |form| %>
-      <p><%= form.text_field :name, placeholder:"トレーニング名" %></p>
-      <p><%= form.text_area :description, placeholder:"説明" %></p>
-      <p>カテゴリー: 
-        <%= form.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
-      </p>
-      <p>
-        <%= form.label :video %>
-        <%= form.file_field :video, :accept => 'video/*' %>
-      </p>
-      <p><%= form.submit "記録" %></p>
+      <div class="weight-bold-text">
+        トレーニング名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= form.text_field :name, class:"posts-text", placeholder:"トレーニング名", maxlength:"20" %>
+      <div class="weight-bold-text">
+        トレーニング説明
+        <span class="indispensable">必須</span>
+      </div>
+      <%= form.text_area :description, class:"posts-text", placeholder:"トレーニング説明", rows: "7", maxlength:"140" %>
+      <div class="weight-bold-text">
+        カテゴリー
+        <span class="indispensable">必須</span>
+      </div>
+      <%= form.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
+      <div class="weight-bold-text">
+        投稿する動画
+        <span class="indispensable">必須</span>
+      </div>
+      <%= form.label :video %>
+      <%= form.file_field :video, :accept => 'video/*' %>
+      <div class="post-btn-contents">
+        <%= form.submit "投稿", class:"post-btn" %>
+      </div>
     <% end %>
   </div>
 </div>
-<div class="right-bar">
-  <div class="right-header">
-    <h2>Q&A</h2>
-  </div>
-  <div class="messages">
-    <div class="message">
-      <div class="message-user">nickname</div>
-      <div class="message-content">aaaaaa</div>
-    </div>
-  </div>
-  <div class="form">
-    <div class="form-input">
-      <input class="form-message" placeholder= "メッセージ">
-    </div>
-    <input class="form-submit" type="submit" value="送信">
-  </div>
-</div>
+<div class="right-bar-new"></div>

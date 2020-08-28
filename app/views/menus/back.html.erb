@@ -1,11 +1,12 @@
-<div class="center-contents">
+<div class="center-contents-index">
   <div class="center-header">背中の日の投稿</div>
-  <div class="post-space">
+  <div class="post-space-index">
     <% @posts.each do |post| %>
       <div class="posts">
-        <p><%= post.user.nickname %></p>
-        <p>トレーニング名: <%= post.name %></p>
-        <p>説明: <%= post.description %></p>
+        <div class="weight-bold-text-index">
+          <%= post.user.nickname %>
+        </div>
+        <p class="training-name">トレーニング名: <%= post.name %></p>
         <%= link_to '', post_path(post.id), method: :get %>
         <div class="video-space">
           <p>
@@ -16,3 +17,4 @@
     <% end %>
   </div>
 </div>
+<div class="right-bar-index"></div>
