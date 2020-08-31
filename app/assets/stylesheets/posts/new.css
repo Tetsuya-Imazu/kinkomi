@@ -56,8 +56,15 @@
   margin-bottom: 4vh;
 }
 
+.left-contents-new{
+  background-color: #eee;
+  width: 175px;
+  height: 100vh;
+  /* border-right: 1px solid #212222; */
+}
 .right-bar-new{
   background-color: #eee;
-  width: 350px;
+  width: 175px;
   height: 100vh;
+  /* border-left: 1px solid #212222; */
 }

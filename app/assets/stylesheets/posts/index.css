@@ -31,9 +31,15 @@
   width: 100%;
 }
 
+.left-contents-index{
+  background-color: #eee;
+  width: 175px;
+  height: 100vh;
+  /* border-right: 1px solid #212222; */
+}
 .right-bar-index{
   background-color: #eee;
-  width: 350px;
+  width: 175px;
   height: 100vh;
-  border-left: 1px solid #212222;
+  /* border-left: 1px solid #212222; */
 }
