@@ -37,7 +37,9 @@
           <%= link_to '削除', post_path(@post.id), class:"delete-btn", method: :delete %>
       </div>
     <% end %>
-    <div class="like-space">
+    <%
+=begin%>
+ <div class="like-space">
       <div class="weight-bold-text">
         いいね!したユーザー
       </div>
@@ -46,7 +48,9 @@
           <li><%= user.nickname %></li>
         </div>
       <% end %>
-    </div>
+    </div> 
+<%
+=end%>
   </div>
 </div>
 <div class="right-bar">

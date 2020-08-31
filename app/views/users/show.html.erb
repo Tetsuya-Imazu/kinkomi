@@ -17,4 +17,18 @@
     <% end %>
   </div>
 </div>
-<div class="right-bar-index"></div>
+<div class="right-bar-user-show">
+  <div class="right-header">
+    <h2>いいね!した投稿</h2>
+  </div>
+  <div class="like-space">
+    <% @user.liked_posts.each do |post| %>
+      <div class="like-contents">
+        <div class="like-user-nickname">
+          <%= post.user.nickname %>: 
+        </div>
+        <span><%= post.name %></span>
+      </div>
+    <% end %>
+  </div>
+</div>

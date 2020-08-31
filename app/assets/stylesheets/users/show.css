@@ -1,0 +1,24 @@
+.right-bar-user-show{
+  background-color: #122c49;
+  width: 350px;
+  height: 100vh;
+  border-left: 1px solid #212222;
+}
+.right-header h2{
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
+}
+.like-space{
+  background-color: #eee;
+  height: calc(100% - 80px);
+  padding: 15px;
+  overflow-y: scroll;
+  overflow: hidden visible;
+}
+.like-contents{
+  margin-bottom: 14px;
+}
+.like-user-nickname{
+  font-weight: bold;
+}
