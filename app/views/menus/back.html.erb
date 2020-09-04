@@ -3,18 +3,9 @@
   <div class="center-header">背中の日の投稿</div>
   <div class="post-space-index">
     <% @posts.each do |post| %>
-      <div class="posts">
-        <div class="weight-bold-text-index">
-          <%= post.user.nickname %>
-        </div>
-        <p class="training-name">トレーニング名: <%= post.name %></p>
-        <%= link_to '', post_path(post.id), method: :get %>
-        <div class="video-space">
-          <p>
-            <%= video_tag post.video.to_s, loop: true, controls: true, :playsinline => 'true', class: "video embed-responsive-post" %>
-          </p>
-        </div>
-      </div>
+      <tr id="<%= post.id %>">
+        <%= render 'post', post: post %>
+      </tr>
     <% end %>
   </div>
 </div>
