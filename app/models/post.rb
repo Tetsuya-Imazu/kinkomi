@@ -9,7 +9,11 @@ class Post < ApplicationRecord
   has_many :likes
   has_many :liked_users, through: :likes, source: :user
 
+  with_options presence: true do
+    validates :name,        length: { maximum: 20 }
+    validates :description, length: { maximum: 140 }
+    validates :category_id, numericality: { other_than: 1 }
+    validates :video
+  end
 
-  validates :name, :description, :category_id, :video, presence: true
-  validates :category_id, numericality: { other_than: 1 }
 end

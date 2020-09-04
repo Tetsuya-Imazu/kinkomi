@@ -21,16 +21,22 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post.destroy
-    redirect_to root_path
+    if @post.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
   end
 
   def edit
   end
 
   def update
-    @post.update(post_params)
-    redirect_to root_path
+    if @post.update(post_params)
+      redirect_to post_path
+    else
+      render :edit
+    end
   end
 
   def show
