@@ -1,0 +1,13 @@
+<div class="like-btn-space">
+  <% if current_user.liked_by?(post.id) %>
+    <p>
+      <%= link_to 'いいね!済', destroy_like_path(post), class: "unlike-btn", method: :DELETE, remote: true %>
+      <%= post.likes.count %>件
+    </p>
+  <% else %>
+    <p>
+      <%= link_to 'いいね!', create_like_path(post), class: "like-btn", method: :POST, remote: true %>
+      <%= post.likes.count %>件
+    </p>
+  <% end %>
+</div>

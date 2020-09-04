@@ -1,5 +1,6 @@
 class MenusController < ApplicationController
-
+  before_action :authenticate_user!
+  
   def chest
     @posts = Post.where(category_id: 2).order("created_at DESC")
   end

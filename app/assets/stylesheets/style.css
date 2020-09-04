@@ -122,13 +122,13 @@
   margin-top: 30px;
 }
 
-.like-btn{
-  margin: 10px 0;
+
+.video-space p{
+  /* width: 650px;
+  height: 380px; */
+  padding: 0 40px;
+  border-bottom: 1px solid #212222;
 }
-/* .video-space p{
-  width: 650px;
-  height: 380px;
-} */
 .video{
   width: 650px;
   height: 380px;

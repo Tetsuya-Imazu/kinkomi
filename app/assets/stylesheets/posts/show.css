@@ -30,7 +30,7 @@
   width: 15vw;
   min-width: 200px;
   color: #212222;
-  border: 2px solid #ffb340;
+  border: 2px solid #add8e6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,3 +105,4 @@
   margin-left: 15px;
   padding: 0 20px;
 }
+
