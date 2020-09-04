@@ -81,6 +81,18 @@
   border-bottom: 1px solid #212222;
   text-align: center;
 }
+.user-info{
+  width: 110px;
+  height: 70px;
+  padding: 10px 0;
+  background-color: #eee;
+  font-size: 18px;
+  position: absolute;
+  text-align: center;
+  top: 130px;
+  left: 180px;
+}
+
 .post-new{
   height: 50px;
   padding: 8px;
