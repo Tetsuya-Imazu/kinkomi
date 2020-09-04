@@ -23,13 +23,6 @@
         カテゴリー:
       </div>
       <%= @post.category.name %>
-      <div class="like-btn">
-        <% if current_user.already_liked?(@post) %>
-          <%= button_to 'いいね!を取り消す', post_like_path(@post), method: :delete %>
-        <% else %>
-          <%= button_to 'いいね!', post_likes_path(@post) %>
-        <% end %>
-      </div>
     </div>
     <% if user_signed_in? && current_user.id == @post.user_id %>
       <div class="more-show">

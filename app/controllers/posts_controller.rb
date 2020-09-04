@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:show, :create]
+  before_action :authenticate_user!
   before_action :set_post, only: [:edit, :show, :update, :destroy]
   before_action :move_to_index, except: [:index, :show]
 
@@ -13,6 +13,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    binding.pry
     if @post.save
       redirect_to root_path
     else
@@ -36,7 +37,6 @@ class PostsController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
-    @like = Like.new
   end
 
   private
