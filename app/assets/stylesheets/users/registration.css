@@ -5,9 +5,9 @@
 }
 .post-space{
   width: 768px;
-  height: 100vh;
+  height: calc(100vh - 60px);
   background-color: #fff;
-  margin: auto;
+  margin-top: 60px;
 }
 .form-group {
   width: 50%;

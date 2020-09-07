@@ -1,7 +1,8 @@
 .center-contents-user-show{
   background-color: #eee;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 60px);
+  margin-top: 60px;
 }
 .right-bar-user-show{
   background-color: #122c49;

@@ -15,7 +15,7 @@
 .post-create{
   width: 768px;
   height: 100vh;
-  padding: 30px;
+  padding: 50px;
   margin: auto;
   background-color: #fff;
   text-align: center;
@@ -62,4 +62,17 @@
   height: 50px;
   font-size: 14px;
   margin-bottom: 4vh;
+}
+
+
+/* スマホ表示時 */
+@media (max-width: 599px) {
+  .post-create{
+    padding: 10px;
+    width: 375px;
+    margin-top: 50px;
+  }
+  .post-btn-contents{
+    margin: 15px auto;
+  }
 }
