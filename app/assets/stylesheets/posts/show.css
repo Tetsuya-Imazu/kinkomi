@@ -1,19 +1,17 @@
 .center-contents-show{
-  background-color: #fff;
-  width: calc(100% - 650px);
-  height: 100vh;
-  overflow-y: scroll;
-  overflow: hidden visible;
+  background-color: #eee;
+  width: 100vw;
+  height: 100%;
 }
 .post-space-show{
-  
-}
-.posts-show{
-  width: 100%;
-  /* height: 540px; */
-  padding: 50px;
-  /* border-bottom: 1px solid #212222; */
-  position: relative;
+  width: 768px;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 50px;
+  background-color: #fff;
+  overflow-y: scroll;
+  overflow: hidden visible;
 }
 .posts-show p{
   margin-top: 10px;
@@ -54,26 +52,10 @@
 .like-user{
   margin: 5px 0 10px 0;
 }
-
-.right-bar{
-  background-color: #122c49;
-  width: 350px;
-  height: 100vh;
-  border-left: 1px solid #212222;
-}
-.right-header{
-  background-color:  #122c49;
-  height: 80px;
-  padding: 20px;
-}
-.right-header h2{
-  font-size: 28px;
-  color: #fff;
-  text-align: center;
-}
 .messages{
   background-color: #eee;
-  height: calc(100% - 160px);
+  width: 100%;
+  height: 300px;
   padding: 15px;
   overflow-y: scroll;
   overflow: hidden visible;
@@ -84,6 +66,7 @@
 .form{
   height: 80px;
   padding: 12px;
+  background-color: orange;
   display: flex;
   box-sizing: border-box;
 }

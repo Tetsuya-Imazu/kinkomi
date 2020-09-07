@@ -6,14 +6,20 @@
   border-bottom: 1px solid #212222;
 }
 .center-contents-new{
-  background-color: #fff;
-  width: calc(100% - 650px);
+  background-color: #eee;
+  width: 100vw;
   height: 100vh;
-  padding: 0 50px;
   overflow-y: scroll;
   overflow: hidden visible;
 }
-
+.post-create{
+  width: 768px;
+  height: 100vh;
+  padding: 30px;
+  margin: auto;
+  background-color: #fff;
+  text-align: center;
+}
 .indispensable {
   background: #ea352d;
   margin-left: 8px;
@@ -56,17 +62,4 @@
   height: 50px;
   font-size: 14px;
   margin-bottom: 4vh;
-}
-
-.left-contents-new{
-  background-color: #eee;
-  width: 175px;
-  height: 100vh;
-  /* border-right: 1px solid #212222; */
-}
-.right-bar-new{
-  background-color: #eee;
-  width: 175px;
-  height: 100vh;
-  /* border-left: 1px solid #212222; */
 }

@@ -1,7 +1,13 @@
 .center-contents-user{
-  background-color: #fff;
-  width: calc(100% - 650px);
+  background-color: #eee;
+  width: 100vw;
   height: 100vh;
+}
+.post-space{
+  width: 768px;
+  height: 100vh;
+  background-color: #fff;
+  margin: auto;
 }
 .form-group {
   width: 50%;

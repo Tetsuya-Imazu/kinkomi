@@ -1,6 +1,6 @@
 <div class="center-contents-user">
-  <div class="center-header">サインイン</div>
   <div class="post-space">
+   <div class="center-header">サインイン</div>
     <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <%= render 'layouts/error_messages', model: f.object %>
 
@@ -26,4 +26,3 @@
     <% end %>
   </div>
 </div>
-<div class="right-bar"></div>
