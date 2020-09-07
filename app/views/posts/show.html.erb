@@ -1,9 +1,15 @@
 <div class="center-contents-show">
-  <div class="center-header">
-    <a href="/users/<%= @post.user.id %>">
-      <p><%= @post.user.nickname %>さんの<%= @post.name %></p>
-    </a>
-  </div>
+  <header>
+    <div class="header-inner">
+      <div>
+        <a href="/users/<%= @post.user.id %>">
+          <%= @post.user.nickname %>さんの
+        </a>
+        <%= @post.name %>
+      </div>
+      <%= link_to '筋コミ', '/', class: 'top-page' %>
+    </div>
+  </header>
   <div class="post-space-show">
     <div class="posts-show">
       <div class="video-space">
@@ -30,38 +36,21 @@
           <%= link_to '削除', post_path(@post.id), class:"delete-btn", method: :delete %>
       </div>
     <% end %>
-    <%
-=begin%>
- <div class="like-space">
-      <div class="weight-bold-text">
-        いいね!したユーザー
-      </div>
-      <% @post.liked_users.each do |user| %>
-        <div class="like-user">
-          <li><%= user.nickname %></li>
-        </div>
-      <% end %>
-    </div> 
-<%
-=end%>
-  </div>
-</div>
-<div class="right-bar">
-  <div class="right-header">
-    <h2>コメント</h2>
-  </div>
-  <div class="messages">
-    <div class="message">
-      <% if @comments %>
-        <% @comments.each do |comment| %>
-          <p>
-            <strong><%= link_to comment.user.nickname, "/uesrs/#{comment.user_id}" %>:</strong>
-            <%= comment.text %>
-          </p>
-        <% end %>
-      <% end %>
+    <div class="weight-bold-text">
+      コメント:
     </div>
-  </div>
+    <div class="messages">
+      <div class="message">
+        <% if @comments %>
+          <% @comments.each do |comment| %>
+            <p>
+              <strong><%= link_to comment.user.nickname, "/uesrs/#{comment.user_id}" %>:</strong>
+              <%= comment.text %>
+            </p>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
     <%= form_with(model: [@post, @comment], local: true) do |form| %>
       <div class="form">
         <div class="form-input">
@@ -74,5 +63,7 @@
         </div>
       </div>
     <% end %>
-</div>
+  </div>
+</div> 
+
 

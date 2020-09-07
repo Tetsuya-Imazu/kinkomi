@@ -1,31 +1,38 @@
+// window.addEventListener('load', function(){
+//   const pullDownButton = document.getElementsByClassName("toggle_btn");
+//   const pullDownParents = document.getElementsByClassName("inner");
+  
+//   pullDownButton.addEventListener('mouseover', function(){
+//   });
+
+//   pullDownButton.addEventListener('mouseout', function(){
+//   });
+
+//   pullDownButton.addEventListener('click', function(){
+//     pullDownParents.setAttribute("style", "display:block;")
+//   })
+
+// });
+
+
 window.addEventListener('load', function(){
-  const pullDownButton = document.getElementById("user-lists");
-  const pullDownParents = document.getElementById("user-pull-down");
-  const postButton = document.getElementById("post-btn");
- 
-
-  pullDownButton.addEventListener('mouseover', function(){
-    this.setAttribute("style", "background-color:#F7C599;")
-  });
-
-  pullDownButton.addEventListener('mouseout', function(){
-    this.removeAttribute("style", "background-color:#F7C599;")
-  });
-
-  pullDownButton.addEventListener('click', function(){
-    if (pullDownParents.getAttribute("style") == "display:block;"){
-      pullDownParents.removeAttribute("style", "display:block;")
-    } else {
-      pullDownParents.setAttribute("style", "display:block;")
-    };
-  });
-
-  postButton.addEventListener('mouseover', function(){
-    this.setAttribute("style", "background-color:#F7C599;")
-  });
-
-  postButton.addEventListener('mouseout', function(){
-    this.removeAttribute("style", "background-color:#F7C599;")
-  });
+  (function($) {
+    var $body   = $('body');
+    var $btn   = $('.toggle_btn');
+    var $mask  = $('#mask');
+    var open   = 'open'; // class
+    // menu open close
+    $btn.on( 'click', function() {
+      if ( ! $body.hasClass( open ) ) {
+        $body.addClass( open );
+      } else {
+        $body.removeClass( open );
+      }
+    });
+    // mask close
+    $mask.on('click', function() {
+      $body.removeClass( open );
+    });
+  } )(jQuery);
 
 });

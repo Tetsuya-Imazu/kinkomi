@@ -1,3 +1,4 @@
+<hr>
 <div class="posts">
   <%= link_to '', post_path(post.id), method: :get %>
   <div class="weight-bold-text-index">
@@ -18,8 +19,9 @@
     </p>
   <% end %>
 </div>
-<div class="video-space">
+<div class="video">
   <p>
     <%= video_tag post.video.to_s, loop: true, controls: true, :playsinline => 'true', class: "video embed-responsive-post" %>
   </p>
 </div>
+

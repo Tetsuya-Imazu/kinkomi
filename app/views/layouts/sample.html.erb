@@ -7,13 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
   </head>
   <body>
-      
+
+
+
     <div class="wrapper">
+      <header>
+        <div class="header-inner">
+          <div>新着投稿</div>
+          <%= link_to '筋コミ', '/' %>
+        </div>
+      </header>
       <div id="navArea">
+
         <nav>
           <div class="inner">
             <% if user_signed_in? %>
@@ -31,7 +39,6 @@
                 <li><%= link_to '# 腕の日', arm_path, class: 'menu' %></li>
                 <li><%= link_to '# 脚の日', leg_path, class: 'menu' %></li>
                 <li><%= link_to '# 腹筋の日', abs_path, class: 'menu' %></li>
-                
               </ul>
             <% else %>
               <ul>
@@ -49,7 +56,7 @@
         </div>
 
         <div id="mask"></div>
-        
+
       </div>
 
       <main>

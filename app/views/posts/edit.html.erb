@@ -1,6 +1,10 @@
-<div class="left-contents-new"></div>
+<header>
+  <div class="header-inner">
+    <div>編集する</div>
+    <%= link_to '筋コミ', '/' %>
+  </div>
+</header>
 <div class="center-contents-new">
-  <div class="center-header-new">編集する</div>
   <div class="post-create">
     <%= form_with model: @post, local: true do |f| %>
     <%= render 'layouts/error_messages', model: f.object %>
@@ -31,4 +35,3 @@
     <% end %>
   </div>
 </div>
-<div class="right-bar-new"></div>
