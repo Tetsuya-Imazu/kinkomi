@@ -100,7 +100,7 @@
   text-align: center;
 }
 .menu-day{
-  height: clac(100% - 180px);
+  height: calc(100% - 180px);
   padding: 100px 0;
   text-align: center;
   color: #212222;
