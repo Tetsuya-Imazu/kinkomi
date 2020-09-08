@@ -31,19 +31,17 @@ WebブラウザGoogle Chromeの最新版を利用してアクセスしてくだ�
 
 筋トレ初心者の「何から始めたらいいか分からない」「長続きしない」などの課題を解決したいと考えたからです。同じ悩みを持った境遇の人達がこのアプリケーションを通じてコミュニケーションを取り合い、トレーニングをすることによって筋トレを習慣化することができると考えました。
 
-## 要件定義
-
-(https://docs.google.com/spreadsheets/d/1hXcy_4E3Z2YypzKF_VYKTmtZ6fKb6eT9wE5SRJv3sI4/edit?usp=sharing)
+# [要件定義](https://docs.google.com/spreadsheets/d/1hXcy_4E3Z2YypzKF_VYKTmtZ6fKb6eT9wE5SRJv3sI4/edit?usp=sharing)
 
 ## アプリの特徴
 
-![training](https://gyazo.com/14d06de8aeb48fef62d8035808d62532)
+![training](https://i.gyazo.com/14d06de8aeb48fef62d8035808d62532.png)
 1. ヘッダーのハンバーガーメニューを押下→投稿するボタン
 
-![training](https://gyazo.com/f984b309f04a7a8eafaf950b07ae72bb)
+![training](https://i.gyazo.com/96bc246726bccf116e6450feb0c6da8d.png)
 2. 投稿する際にカテゴリーを選択します
 
-![training](https://gyazo.com/62e9e4d08b814bb782934dd492517241)
+![training](https://i.gyazo.com/62e9e4d08b814bb782934dd492517241.png)
 3. 1のメニュー内にカテゴリーごとに投稿が保存されているので、その日鍛えたい部位の投稿を見ることができます。
 
 ## 実装予定の機能
