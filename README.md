@@ -37,13 +37,13 @@ WebブラウザGoogle Chromeの最新版を利用してアクセスしてくだ�
 
 ## アプリの特徴
 
-(https://gyazo.com/14d06de8aeb48fef62d8035808d62532)
+![training](https://gyazo.com/14d06de8aeb48fef62d8035808d62532)
 1. ヘッダーのハンバーガーメニューを押下→投稿するボタン
 
-(https://gyazo.com/f984b309f04a7a8eafaf950b07ae72bb)
+![training](https://gyazo.com/f984b309f04a7a8eafaf950b07ae72bb)
 2. 投稿する際にカテゴリーを選択します
 
-(https://gyazo.com/62e9e4d08b814bb782934dd492517241)
+![training](https://gyazo.com/62e9e4d08b814bb782934dd492517241)
 3. 1のメニュー内にカテゴリーごとに投稿が保存されているので、その日鍛えたい部位の投稿を見ることができます。
 
 ## 実装予定の機能
@@ -110,6 +110,6 @@ WebブラウザGoogle Chromeの最新版を利用してアクセスしてくだ�
 - belongs_to :user
 
 
-[ER図](https://drive.google.com/file/d/1PgJF4qmbfMJnBsp96xo6_IBshyWK8fhz/view?usp=sharing)
-)
+# [ER図](https://drive.google.com/file/d/1PgJF4qmbfMJnBsp96xo6_IBshyWK8fhz/view?usp=sharing)
+
 
