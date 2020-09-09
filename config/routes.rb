@@ -7,7 +7,13 @@ Rails.application.routes.draw do
     resources :comments, only: :create
     # resources :likes, only: [:create, :destroy]
   end
-  resources :users, only: :show
+  resources :users, only: :show do
+    collection do
+      get :likes
+    end
+  end
+
+
   get "chest" => "menus#chest"
   get "back" => "menus#back"
   get "shoulder" => "menus#shoulder"

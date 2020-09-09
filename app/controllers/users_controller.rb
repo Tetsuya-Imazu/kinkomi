@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @posts = Post.includes(:user).order("created_at DESC")
     @user = User.find(params[:id])
     @nickname = @user.nickname
     @posts = @user.posts

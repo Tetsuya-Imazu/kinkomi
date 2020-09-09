@@ -7,9 +7,9 @@
 <div class="center-contents-index">
   <div class="post-space-index">
     <% @posts.each do |post| %>
-      <p id="post_<%= post.id %>">
+      <div id="post_<%= post.id %>">
         <%= render 'posts/post', post: post %>
-      </p>
+      </div>
     <% end %>
   </div>
 </div>
