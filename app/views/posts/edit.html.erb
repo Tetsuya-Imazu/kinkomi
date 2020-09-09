@@ -1,7 +1,7 @@
 <header>
   <div class="header-inner">
     <div>編集する</div>
-    <%= link_to '筋コミ', '/', class: 'top-page' %>
+    <%= link_to image_tag("kinkomilogo2.png", class:"top-page"), "/" %>
   </div>
 </header>
 <div class="center-contents-new">
@@ -17,7 +17,7 @@
         トレーニング説明
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :description, class:"posts-text", placeholder:"トレーニング説明", rows: "7", maxlength:"140" %>
+      <%= f.text_area :description, class:"posts-text", placeholder:"トレーニング説明", rows: "5", maxlength:"140" %>
       <div class="weight-bold-text">
         カテゴリー
         <span class="indispensable">必須</span>

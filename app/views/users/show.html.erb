@@ -3,41 +3,15 @@
     <div>
       <%= @nickname %>さんの投稿一覧
     </div>
-    <%= link_to '筋コミ', '/', class: 'top-page' %>
+    <%= link_to image_tag("kinkomilogo2.png", class:"top-page"), "/" %>
   </div>
 </header>
 <div class="center-contents-user-show">
   <div class="post-space-index">
     <% @posts.each do |post| %>
-      <div class="posts">
-        <%= link_to '', post_path(post.id), method: :get %>
-        <div class="weight-bold-text-index">
-          <%= post.user.nickname %>
-        </div>
-        <p class="training-name">トレーニング名: <%= post.name %></p>
-      </div>
-      <div class="like-btn-space">
-        <% if current_user.liked_by?(post.id) %>
-          <p>
-            <%= link_to 'いいね!済', destroy_like_path(post), class: "unlike-btn", method: :DELETE, remote: true %>
-            <%= post.likes.count %>件
-          </p>
-        <% else %>
-          <p>
-            <%= link_to 'いいね!', create_like_path(post), class: "like-btn", method: :POST, remote: true %>
-            <%= post.likes.count %>件
-          </p>
-        <% end %>
-      </div>
-      <div class="video-space">
-        <p>
-          <%= video_tag post.video.to_s, loop: true, controls: true, :playsinline => 'true', class: "video embed-responsive-post" %>
-        </p>
-      </div>
-      <hr>
+      <p id="post_<%= post.id %>">
+        <%= render 'posts/post', post: post %>
+      </p>
     <% end %>
   </div>
 </div>
-
-
- 

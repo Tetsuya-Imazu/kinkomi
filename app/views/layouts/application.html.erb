@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>KinKomi</title>
+    <title>筋コミ</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
   </head>
   <body>
-      
     <div class="wrapper">
       <div id="navArea">
         <nav>
@@ -30,8 +27,7 @@
                 <li><%= link_to '# 肩の日', shoulder_path, class: 'menu' %></li>
                 <li><%= link_to '# 腕の日', arm_path, class: 'menu' %></li>
                 <li><%= link_to '# 脚の日', leg_path, class: 'menu' %></li>
-                <li><%= link_to '# 腹筋の日', abs_path, class: 'menu' %></li>
-                
+                <li><%= link_to '# 腹筋の日', abs_path, class: 'menu' %></li>  
               </ul>
             <% else %>
               <ul>
@@ -41,17 +37,13 @@
             <% end %>
           </div>
         </nav>
-
         <div class="toggle_btn">
           <span></span>
           <span></span>
           <span></span>
         </div>
-
         <div id="mask"></div>
-        
       </div>
-
       <main>
         <%= yield %>
       </main>

@@ -111,8 +111,7 @@ header{
 }
 
 .top-page{
-  color: #fff;
-  font-size: 30px;
+  width: 10vw;
 }
 .alert-warning{
   margin-top: 10px;

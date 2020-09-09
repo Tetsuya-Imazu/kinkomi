@@ -1,20 +1,3 @@
-// window.addEventListener('load', function(){
-//   const pullDownButton = document.getElementsByClassName("toggle_btn");
-//   const pullDownParents = document.getElementsByClassName("inner");
-  
-//   pullDownButton.addEventListener('mouseover', function(){
-//   });
-
-//   pullDownButton.addEventListener('mouseout', function(){
-//   });
-
-//   pullDownButton.addEventListener('click', function(){
-//     pullDownParents.setAttribute("style", "display:block;")
-//   })
-
-// });
-
-
 window.addEventListener('load', function(){
   (function($) {
     var $body   = $('body');
@@ -34,5 +17,4 @@ window.addEventListener('load', function(){
       $body.removeClass( open );
     });
   } )(jQuery);
-
 });
