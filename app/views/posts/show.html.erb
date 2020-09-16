@@ -44,7 +44,7 @@
         <% if @comments %>
           <% @comments.each do |comment| %>
             <p>
-              <strong><%= link_to comment.user.nickname, "/uesrs/#{comment.user_id}" %>:</strong>
+              <strong><%= comment.user.nickname %>:</strong>
               <%= comment.text %>
             </p>
           <% end %>

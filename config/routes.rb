@@ -19,5 +19,5 @@ Rails.application.routes.draw do
   get "shoulder" => "menus#shoulder"
   get "arm" => "menus#arm"
   get "leg" => "menus#leg"
-  get "abs" => "menus#abs"
+  get "trunk" => "menus#trunk"
 end

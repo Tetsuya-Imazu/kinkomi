@@ -21,7 +21,7 @@ class MenusController < ApplicationController
     @posts = Post.where(category_id: 6).order("created_at DESC")
   end
 
-  def abs
+  def trunk
     @posts = Post.where(category_id: 7).order("created_at DESC")
   end
 
