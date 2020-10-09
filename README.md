@@ -35,10 +35,10 @@ WebブラウザGoogle Chromeの最新版を利用してアクセスしてくだ�
 
 ## アプリの特徴
 
-![training](https://i.gyazo.com/185fbd2e1d4b57ba82d7fb3c64b0f285.mp4)
+![training](https://i.gyazo.com/956ebc12793b92597f4ebcc8cf90bed5.jpg)
 1. ヘッダーのハンバーガーメニューを押下→投稿するボタン
 
-![training](https://i.gyazo.com/197c0228871c682c33c277f3b1576272.mp4)
+![training](https://i.gyazo.com/62b944d4862fcdf4b09405f2db1c6269.png)
 2. 投稿する際にカテゴリーを選択します
 
 ![training](https://i.gyazo.com/2778dd65a720958f086fd7dae7c3cbae.png)
