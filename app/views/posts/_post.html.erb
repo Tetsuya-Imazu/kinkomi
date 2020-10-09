@@ -3,7 +3,13 @@
   <div class="weight-bold-text-index">
     <%= post.user.nickname %>
   </div>
-  <div class="training-name">トレーニング名: <%= post.name %></div>
+  <% if post.video? %>
+    <% if post.video.file.content_type.include?('video/') %>
+      <div class="training-name">トレーニング名: <%= post.name %></div>
+    <% else %>
+      <div class="training-name">食事名: <%= post.name %></div>
+    <% end %>
+  <% end %>
 </div>
 <div class="like-btn-space">
   <% if current_user.liked_by?(post.id) %>
@@ -14,6 +20,12 @@
   <%= post.likes.count %>件
 </div>
 <div class="video">
-  <%= video_tag post.video.to_s, loop: true, controls: true, :playsinline => 'true', class: "video embed-responsive-post" %>
+  <% if post.video? %>
+    <% if post.video.file.content_type.include?('video/') %>
+      <%= video_tag post.video.to_s, loop: true, controls: true, :playsinline => 'true', class: "video embed-responsive-post" %>
+    <% else %>
+      <%= image_tag post.video.to_s, class: "video embed-responsive-post" %>
+    <% end %>
+  <% end %>
 </div>
 <hr>

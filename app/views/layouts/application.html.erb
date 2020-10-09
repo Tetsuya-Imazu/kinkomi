@@ -22,13 +22,14 @@
               </li>
               <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
               <li><%= link_to '投稿する', '/posts/new', class: 'post', method: :GET %></li>
+              <li><%= link_to '# いいね!した投稿', likes_users_path, class: 'menu' %></li>
               <li><%= link_to '# 胸の日', chest_path, class: 'menu' %></li>
               <li><%= link_to '# 背中の日', back_path, class: 'menu' %></li>
               <li><%= link_to '# 肩の日', shoulder_path, class: 'menu' %></li>
               <li><%= link_to '# 腕の日', arm_path, class: 'menu' %></li>
               <li><%= link_to '# 脚の日', leg_path, class: 'menu' %></li>
               <li><%= link_to '# 腹筋の日', trunk_path, class: 'menu' %></li>
-              <li><%= link_to '# いいね!した投稿', likes_users_path, class: 'menu' %></li>
+              <li><%= link_to '# 食事メニュー', food_path, class: 'menu' %></li>
             </ul>
           <% else %>
             <ul>

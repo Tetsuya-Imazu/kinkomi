@@ -14,12 +14,22 @@
     <div class="posts-show">
       <div class="video-space">
         <p>
-          <%= video_tag @post.video.to_s, loop: true, controls: true, :playsinline => 'true', class: "video embed-responsive-post" %>
+          <% if @post.video? %>
+            <% if @post.video.file.content_type.include?('video/') %>
+              <%= video_tag @post.video.to_s, loop: true, controls: true, :playsinline => 'true', class: "video embed-responsive-post" %>
+            <% else %>
+              <%= image_tag @post.video.url %>
+            <% end %>
+          <% end %>
         </p>
       </div>
-      <div class="weight-bold-text">
-        トレーニング名:
-      </div>
+      <% if @post.video? %>
+        <% if @post.video.file.content_type.include?('video/') %>
+          <div class="weight-bold-text">トレーニング名:</div>
+        <% else %>
+          <div class="weight-bold-text">食事名:</div>
+        <% end %>
+      <% end %>
       <%= @post.name %>
       <div class="weight-bold-text">
         説明:

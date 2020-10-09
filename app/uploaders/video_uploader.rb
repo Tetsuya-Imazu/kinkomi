@@ -2,7 +2,7 @@ class VideoUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
-  # process resize_to_fit: [300, 200]
+  # process resize_to_fit: [150, 150]
   # Choose what kind of storage to use for this uploader:
   # storage :file
   if Rails.env.production?
@@ -35,8 +35,8 @@ class VideoUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   # version :thumb do
-  #   # process :resize_to_fill => [650, 380, gravity = ::Magick::CenterGravity]
-  #   process resize_to_fit: [300, 200]
+  #   process :resize_to_fill => [650, 380, gravity = ::Magick::CenterGravity]
+  #   process resize_to_limit: [400, 400]
   # end
 
   # Add a white list of extensions which are allowed to be uploaded.

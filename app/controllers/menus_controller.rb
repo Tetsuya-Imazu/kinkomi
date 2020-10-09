@@ -25,4 +25,8 @@ class MenusController < ApplicationController
     @posts = Post.where(category_id: 7).order("created_at DESC")
   end
 
+  def food
+    @posts = Post.where(category_id: 8).order("created_at DESC")
+  end
+
 end

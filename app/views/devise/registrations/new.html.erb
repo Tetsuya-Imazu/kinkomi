@@ -1,14 +1,13 @@
 <header>
   <div class="header-inner">
     <div>サインアップ</div>
-    <%= link_to '筋コミ', '/', class: 'top-page' %>
+    <%= link_to image_tag("kinkomilogo2.png", class:"top-page"), "/" %>
   </div>
 </header>
 <div class="center-contents-new">
   <div class="post-create">
     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <%= render 'layouts/error_messages', model: f.object %>
-
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="form-text">ニックネーム</label>

@@ -9,15 +9,15 @@
     <%= form_with model: @post, local: true do |f| %>
     <%= render 'layouts/error_messages', model: f.object %>
       <div class="weight-bold-text">
-        トレーニング名
+        トレーニング名/食事名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_field :name, class:"posts-text", placeholder:"トレーニング名", maxlength:"20" %>
+      <%= f.text_field :name, class:"posts-text", placeholder:"トレーニング名/食事名", maxlength:"20" %>
       <div class="weight-bold-text">
-        トレーニング説明
+        トレーニング説明/食事名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :description, class:"posts-text", placeholder:"トレーニング説明", rows: "5", maxlength:"140" %>
+      <%= f.text_area :description, class:"posts-text", placeholder:"トレーニング説明/食事説明", rows: "5", maxlength:"140" %>
       <div class="weight-bold-text">
         カテゴリー
         <span class="indispensable">必須</span>
@@ -28,7 +28,7 @@
         <span class="indispensable">必須</span>
       </div>
       <%= f.label :video %>
-      <%= f.file_field :video, :accept => 'video/*' %>
+      <%= f.file_field :video, :accept => 'video/*, image/*' %>
       <div class="post-btn-contents">
         <%= f.submit "投稿", class:"post-btn" %>
       </div>

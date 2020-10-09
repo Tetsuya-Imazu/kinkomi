@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   get "arm" => "menus#arm"
   get "leg" => "menus#leg"
   get "trunk" => "menus#trunk"
+  get "food" => "menus#food"
 end
