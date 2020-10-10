@@ -23,13 +23,16 @@
           <% end %>
         </p>
       </div>
-      <% if @post.video? %>
-        <% if @post.video.file.content_type.include?('video/') %>
-          <div class="weight-bold-text">トレーニング名:</div>
-        <% else %>
-          <div class="weight-bold-text">食事名:</div>
+      <div class="post-mid">
+        <% if @post.video? %>
+          <% if @post.video.file.content_type.include?('video/') %>
+            <div class="weight-bold-text">トレーニング名:</div>
+          <% else %>
+            <div class="weight-bold-text">食事名:</div>
+          <% end %>
         <% end %>
-      <% end %>
+        <%= @post.created_at.strftime('%Y/%m/%d %H:%M') %>
+      </div>
       <%= @post.name %>
       <div class="weight-bold-text">
         説明:

@@ -43,7 +43,6 @@ html{
  .wrapper{
   display: flex;
 }
-
 .center-contents{
   background-color: #eee;
   width: calc(100% - 650px);
@@ -60,6 +59,10 @@ html{
 }
 .post-create p{
   margin-top: 30px;
+}
+.post-top, .post-mid{
+  display: flex;
+  justify-content: space-between;
 }
 .video{
   width: 650px;

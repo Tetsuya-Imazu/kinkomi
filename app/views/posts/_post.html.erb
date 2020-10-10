@@ -1,8 +1,13 @@
 <div class="posts">
   <%= link_to '', post_path(post.id), method: :get %>
-  <div class="weight-bold-text-index">
-    <%= post.user.nickname %>
+
+  <div class="post-top">
+    <div class="weight-bold-text-index">
+      <%= post.user.nickname %>
+    </div>
+    <%= post.created_at.strftime('%Y/%m/%d %H:%M') %>
   </div>
+
   <% if post.video? %>
     <% if post.video.file.content_type.include?('video/') %>
       <div class="training-name">トレーニング名: <%= post.name %></div>
