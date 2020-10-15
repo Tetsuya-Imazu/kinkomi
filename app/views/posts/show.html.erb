@@ -1,7 +1,13 @@
 <header>
   <div class="header-inner">
     <div>
-      <a href="/users/<%= @post.user.id %>">
+      <div class="toggle_btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div id="mask"></div>
+      <a href="/users/<%= @post.user.id %>" class="header-inner-title">
         <%= @post.user.nickname %>さん
       </a>
       の投稿
