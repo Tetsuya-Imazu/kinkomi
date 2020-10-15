@@ -122,6 +122,10 @@ header{
 .alert-warning{
   margin-top: 10px;
 }
+.post-none{
+  margin-top: 50px;
+  text-align: center;
+}
 /*============
 nav
 =============*/

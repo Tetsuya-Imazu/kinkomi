@@ -12,12 +12,4 @@
     <%= link_to image_tag("kinkomilogo2.png", class:"top-page"), "/" %>
   </div>
 </header>
-<div class="center-contents-user-show">
-  <div class="post-space-index">
-    <% @posts.each do |post| %>
-      <div id="post_<%= post.id %>">
-        <%= render 'posts/post', post: post %>
-      </div>
-    <% end %>
-  </div>
-</div>
+<%= render 'posts/posts', post: @post %>

@@ -1,0 +1,19 @@
+<% if @posts.exists? %>
+  <div class="center-contents-index">
+    <div class="post-space-index">
+      <% @posts.each do |post| %>
+        <div id="post_<%= post.id %>">
+          <%= render 'posts/post', post: post %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% else %>
+  <div class="center-contents-index">
+    <div class="post-space-index">
+      <div class="post-none">
+        <%= link_to '投稿してね!!', '/posts/new', method: :GET %>
+      </div>
+    </div>
+  </div>
+<% end %>

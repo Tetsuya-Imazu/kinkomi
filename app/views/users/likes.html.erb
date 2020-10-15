@@ -10,12 +10,22 @@
     <%= link_to image_tag("kinkomilogo2.png", class:"top-page"), "/" %>
   </div>
 </header>
-<div class="center-contents-index">
-  <div class="post-space-index">
-    <% current_user.liked_posts.each do |post| %>
-      <div id="post_<%= post.id %>">
-        <%= render 'posts/post', post: post %>
-      </div>
-    <% end %>
+<% if current_user.liked_posts.exists? %>
+  <div class="center-contents-index">
+    <div class="post-space-index">
+      <% current_user.liked_posts.each do |post| %>
+        <div id="post_<%= post.id %>">
+          <%= render 'posts/post', post: post %>
+        </div>
+      <% end %>
+    </div>
   </div>
-</div>
+<% else %>
+  <div class="post-none">
+    <div class="center-contents-index">
+      <div class="post-space-index">
+        <%= link_to '投稿をいいねしよう!!', root_path %>
+      </div>
+    </div>
+  </div>
+<% end %>
